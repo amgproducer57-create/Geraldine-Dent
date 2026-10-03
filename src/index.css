@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --blanco-hueso: #FAFAF7;
+    --azul-dental: #029CE3;
+    --azul-niebla: #E4EFF4;
+    --menta-fresco: #7FC8BC;
+    --carbon-suave: #1E2A32;
+    --gris-niebla: #8A9BA6;
+    --dorado-sonrisa: #E8B86D;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FAFAF7;
+    color: #1E2A32;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-sora {
+  font-family: 'Sora', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-serif-instrument {
+  font-family: 'Instrument Serif', Georgia, serif;
+}
+
+/* Custom animation for smile curve draw */
+@keyframes drawSmile {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-smile {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawSmile 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Infinite smooth horizontal marquee animation (moving left, appearing from right) */
+@keyframes marqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-infinite:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbars when needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

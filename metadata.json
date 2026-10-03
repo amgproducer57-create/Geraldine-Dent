@@ -1,0 +1,6 @@
+{
+  "name": "Geraldine Dent — Centro Odontológico en Jaén",
+  "description": "Sitio web oficial de Geraldine Dent en Jaén, Cajamarca. Especialistas en diseño de sonrisa, ortodoncia, odontología infantil y estética dental.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
